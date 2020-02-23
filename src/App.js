@@ -1,26 +1,20 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect } from 'react';
+import { connect } from 'react-redux';
+import getLiveProgramsAction from './actions/liveProgramActions';
+import MainView from './view/MainView';
+import Navbar from './components/Navbar/Navbar';
 
-function App() {
+const App = (props) => {
+  useEffect(() => {
+    props.getLiveProgramsAction();
+  }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Navbar/>
+      <MainView />
     </div>
   );
-}
+};
 
-export default App;
+export default connect(null, { getLiveProgramsAction })(App);
