@@ -5,7 +5,7 @@ import AllChannels from '../components/AllChannels/AllChannels'
 import SpecificDay from '../components/SpecificDay/SpecificDay'
 import { Route, Switch } from 'react-router-dom';
 
-const MainView = (props) => {
+const MainView = () => {
    return (
    <div>
       <Switch>
