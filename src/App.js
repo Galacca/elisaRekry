@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import getLiveProgramsAction from './actions/liveProgramActions';
 import MainView from './view/MainView';
 import Navbar from './components/Navbar/Navbar';
+import { BrowserRouter as Router} from 'react-router-dom';
 
 const App = (props) => {
   useEffect(() => {
@@ -11,8 +12,10 @@ const App = (props) => {
 
   return (
     <div>
+      <Router>
       <Navbar/>
       <MainView />
+      </Router>
     </div>
   );
 };

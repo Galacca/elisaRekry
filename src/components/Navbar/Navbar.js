@@ -1,21 +1,17 @@
 import React from 'react';
-import { connect } from 'react-redux';
-import switchViewAction from '../../actions/viewActions'
+import { Link } from 'react-router-dom';
 import './Navbar.css';
 
-const navigationButtons = ['Currently live', 'All channels', 'Specific day']
+const navigationButtons = ['allchannels', 'specificday', 'currentlylive']
 
 const Navbar = (props) => {
    return (
     <>
       <nav className="navbar">
-        | {navigationButtons.map(nb => <div key={nb} className="navbarClickable" onClick={() => props.switchViewAction(nb)}>{nb} | </div>)}       
+        | {navigationButtons.map(nb => <div key={nb} className="navbarClickable"><Link to={nb}>{nb}</Link> | </div>)}
       </nav>
     </>
   );
 };
 
-export default connect(
-  null,
-  { switchViewAction },
-)(Navbar);
+export default Navbar

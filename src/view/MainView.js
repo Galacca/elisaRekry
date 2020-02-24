@@ -3,16 +3,18 @@ import { connect } from 'react-redux';
 import CurrentlyLive from '../components/CurrentlyLive/CurrentlyLive'
 import AllChannels from '../components/AllChannels/AllChannels'
 import SpecificDay from '../components/SpecificDay/SpecificDay'
-
-const viewSelector = (props) => {
-  if(props.currentView === 'All channels') return <AllChannels />
-  else if (props.currentView === 'Specific day') return <SpecificDay />
-  return <CurrentlyLive />
-};
+import { Route, Switch } from 'react-router-dom';
 
 const MainView = (props) => {
    return (
-   viewSelector(props)
+   <div>
+      <Switch>
+       <Route exact path='/' component={CurrentlyLive}></Route>
+       <Route path='/allchannels' component={AllChannels}></Route>
+       <Route path='/specificday' component={SpecificDay}></Route>
+       <Route path='/currentlylive' component={CurrentlyLive}></Route>
+      </Switch>
+   </div>
   );
 };
 
