@@ -3,8 +3,7 @@ import { connect } from 'react-redux';
 
 
 const CurrentlyLive = (props) => {
-    if (!props) return <div>Loading...</div>
-    return <div>MW Currently live:</div>
+return props.livePrograms.map(s => <li key={s.channel.id}>{s.channel.name} | {s.programs.map(p => p.name)}</li>)
 }
 
 const mapStateToProps = (state) => ({

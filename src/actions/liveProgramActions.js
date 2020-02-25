@@ -6,6 +6,10 @@ const getLiveProgramsAction = () => async (dispatch) => {
     type: 'GET_CURRENT_LIVE_PROGRAMS',
     data: liveProgramData,
   });
+  dispatch({
+    type: 'LOADING_COMPLETE',
+    data: 'Currently live'
+  })
 };
 
 export default getLiveProgramsAction;

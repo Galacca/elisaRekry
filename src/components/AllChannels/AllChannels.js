@@ -1,7 +1,14 @@
 import React from 'react';
+import { connect } from 'react-redux';
 
-const AllChannels = () => {
-    return <div>MW All channels:</div>
+
+const AllChannels = (props) => {
+return props.allChannels.map(s => <li key={s.id}>{s.name} | {s.description}</li>)
 }
 
-export default AllChannels;
+const mapStateToProps = (state) => ({
+    allChannels: state.allChannels,
+});
+  
+const connectedAllChannels = connect(mapStateToProps)(AllChannels);
+export default connectedAllChannels;
