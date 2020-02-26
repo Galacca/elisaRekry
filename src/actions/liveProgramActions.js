@@ -1,4 +1,4 @@
-import { getLivePrograms } from '../services/programService'
+import getLivePrograms from '../services/programService';
 
 const getLiveProgramsAction = () => async (dispatch) => {
   const liveProgramData = await getLivePrograms();
@@ -8,8 +8,8 @@ const getLiveProgramsAction = () => async (dispatch) => {
   });
   dispatch({
     type: 'LOADING_COMPLETE',
-    data: 'Currently live'
-  })
+    data: 'Currently live',
+  });
 };
 
 export default getLiveProgramsAction;

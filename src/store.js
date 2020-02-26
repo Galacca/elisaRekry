@@ -2,9 +2,9 @@ import { createStore, combineReducers, applyMiddleware } from 'redux';
 import thunk from 'redux-thunk';
 import { composeWithDevTools } from 'redux-devtools-extension';
 import liveProgramReducer from './reducers/programReducer';
-import loadingStateReducer from './reducers/loadingStateReducer'
-import channelReducer from './reducers/channelReducer'
-import findReducer from './reducers/findReducer'
+import loadingStateReducer from './reducers/loadingStateReducer';
+import channelReducer from './reducers/channelReducer';
+import findReducer from './reducers/findReducer';
 
 const reducer = combineReducers({
   livePrograms: liveProgramReducer,

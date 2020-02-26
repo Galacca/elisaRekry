@@ -1,4 +1,4 @@
-import { getAllChannels } from '../services/channelService'
+import getAllChannels from '../services/channelService';
 
 const getAllChannelsAction = () => async (dispatch) => {
   const allChannelsData = await getAllChannels();
@@ -8,8 +8,8 @@ const getAllChannelsAction = () => async (dispatch) => {
   });
   dispatch({
     type: 'LOADING_COMPLETE',
-    data: 'All channels'
-  })
+    data: 'All channels',
+  });
 };
 
 export default getAllChannelsAction;

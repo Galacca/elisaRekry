@@ -1,8 +1,4 @@
-.Parent {
-    display: table-row;
-}
-
-.Child {
+.FindChild {
     border: 1px solid lightblue;
     padding: 1em;
 }

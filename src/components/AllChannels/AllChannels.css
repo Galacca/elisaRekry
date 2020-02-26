@@ -1,9 +1,4 @@
-.Parent {
-    display: grid;
-    grid-template-columns: auto auto auto;
-}
-
-.Child {
+.AllChannelsChild {
     border: 1px solid lightblue;
     padding: 1em;
 }
