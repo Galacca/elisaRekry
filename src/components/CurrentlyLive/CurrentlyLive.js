@@ -1,10 +1,12 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import './CurrentlyLive.css'
 
-
-const CurrentlyLive = (props) => {
-return props.livePrograms.map(s => <li key={s.channel.id}>{s.channel.name} | {s.programs.map(p => p.name)}</li>)
-}
+const CurrentlyLive = (props) => (
+    <div className = "Parent">
+        {props.livePrograms.map(s => <div className="Child" key={s.channel.id}>{s.channel.name}<br /><br />{s.programs.map(p => p.name)}</div>)}
+    </div>
+)
 
 const mapStateToProps = (state) => ({
     livePrograms: state.livePrograms

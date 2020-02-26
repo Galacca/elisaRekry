@@ -1,0 +1,9 @@
+.Parent {
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+
+.Child {
+    border: 1px solid lightblue;
+    padding: 1em;
+}

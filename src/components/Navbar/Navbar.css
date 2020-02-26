@@ -1,4 +1,11 @@
-.navbarClickable {
-    display: inline;
-    cursor: pointer;
+.navbar {
+    color: #0019af;
+    font-size: large;
+    display: flex;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    padding-inline-start: 1em;
+    border: 1px solid blue;
+    flex-wrap: wrap;
 }
+

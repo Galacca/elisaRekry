@@ -1,0 +1,8 @@
+.Parent {
+    display: table-row;
+}
+
+.Child {
+    border: 1px solid lightblue;
+    padding: 1em;
+}

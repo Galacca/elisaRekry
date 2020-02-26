@@ -12,6 +12,7 @@ const Find = (props) => {
         event.preventDefault()
         props.getByChannelAndDateAction(event.target.channel.value, event.target.day.value, event.target.month.value)    
     }
+    
     return (
         <div>
             <form onSubmit={search}>
@@ -22,6 +23,7 @@ const Find = (props) => {
             <br />
             <button type="submit">Find</button>
             </form>
+            <br />
             <FindResult />
         </div>
     )
@@ -29,7 +31,6 @@ const Find = (props) => {
 
 const mapStateToProps = (state) => ({
     allChannels: state.allChannels,
-    find: state.find,
 });
 
 const connectedFind = connect(mapStateToProps, { getByChannelAndDateAction })(Find);
